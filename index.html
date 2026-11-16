@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recolor a growing connected island to fill a six-by-six board, with undo and replay.">
+  <title>Island Flood Puzzle</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<main>
+  <div class="heading">
+    <div><h1>Island Flood Puzzle</h1><p>Recolor a growing connected island to fill a six-by-six board, with undo and replay.</p></div>
+    <a href="https://github.com/netcodermike/island-flood-puzzle">Project source ↗</a>
+  </div>
+  <div class="workspace">
+    <section class="panel stage" aria-label="Project workspace">
+      <div id="island" class="island" role="img"></div>
+      <p id="reading" role="status"></p>
+    </section>
+    <section class="panel controls" aria-label="Controls">
+      <p>The outlined island starts in the upper-left corner. Pick a color to repaint it and absorb any matching neighbors. Fill the board before you run out of moves.</p>
+        <div id="colors" class="colors" role="group" aria-label="Island colors"></div>
+        <div class="actions"><button type="button" id="undo" disabled>Undo</button><button type="button" id="replay">Replay</button>
+        <button type="button" id="new-board">New board</button></div>
+    </section>
+  </div>
+</main>
+</body>
+</html>
